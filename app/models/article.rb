@@ -1,5 +1,5 @@
 class Article < ActiveRecord::Base
-    has_one :category
+    belongs_to :category
 
     scope :active, where('active = ?', true)
     scope :alphabetical, order('title')
